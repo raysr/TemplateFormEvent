@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Arduino Setup UNO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]><script 
+src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+<script> 
+	var rb;
+window.onload=function(){
+	rb=document.getElementById("knownyes");
+	rb.addEventListener("change",function(e){
+		if(rb.checked){
+			document.getElementById("kakashi").style.display="initial";}
+			
+	});
+
+	rc=document.getElementById("knownno");
+	rc.addEventListener("change",function(e){
+		if(rc.checked){
+			document.getElementById("kakashi").style.display="none";
+		}
+			
+	});
+}
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+  <h1 class="register-title">Arduino Setup UNO</h1>
+  <form class="register" href="popup1">
+    
+    
+
+    <input type="text" class="register-input" placeholder="Nom">
+    <input type="text" class="register-input" placeholder="Prénom">
+    <input type="text" class="register-input" 
+placeholder="Année d'étude">
+    <input type="text" class="register-input" 
+placeholder="Spécialité">
+    <input type="text" class="register-input" placeholder="Email">
+    <input type="text" class="register-input" placeholder="N° de téléphone">
+    
+    
+    <br/>
+    
+    <p> Connaissez-vous l'Arduino ? </p>
+    <br/><div class="register-switch">
+    <input type="radio" name="known" value="yes" id="knownyes" 
+class="register-switch-input" >
+        <label for="knownyes" class="register-switch-label">Oui</label>
+    <input type="radio" name="known" value="no" id="knownno" 
+class="register-switch-input" checked>
+        <label for="knownno" class="register-switch-label">Non</label></div>   
+    
+
+   <br/> 
+    <div id="kakashi">
+    <p> Votre niveau </p><br/> 
+    
+    <select name="niveau" id="level">
+      <option value="aucun">Aucun</option>
+      <option value="debutant">Débutant</option>
+      <option value="intermediaire">intérmediaire</option>
+      <option value="expert">Expert</option>
+    </select>
+
+    </div>
+    <br/><br/>
+
+    
+    <p> Je viendrai le..</p><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+
+    <div class="register-switch">
+    <input type="radio" name="coming" value="dec2" id="dec2" 
+class="register-switch-input" checked>
+        <label for="dec2" class="register-switch-label2">2 Décembre</label>
+    <input type="radio" name="coming" value="dec3" id="dec3" 
+class="register-switch-input">
+        <label for="dec3" class="register-switch-label2">3 Décembre</label>
+
+<input type="radio" name="coming" value="both" id="both" 
+class="register-switch-input">
+        <label for="both" class="register-switch-label2">Les deux</label>
+
+      </div>
+    <br/><br/><br/>
+
+
+    <p> Avez-vous déja participer à un événement de ce type ? </p><br/>
+    <div class="register-switch">
+      <input type="radio" name="participated" value="yes" id="partyes" 
+class="register-switch-input" checked>
+      <label for="partyes" class="register-switch-label">Oui</label>
+      <input type="radio" name="participated" value="no" id="partno" 
+class="register-switch-input">
+      <label for="partno" class="register-switch-label">Non</label>
+    
+    <br/><br/>   <br/><br/>
+        <input type="text" class="register-input" placeholder="Je suis 
+interessé(e) parce que .."><br/><br/>
+    
+    </div>  <br/><br/> <br/><br/>   <br/><br/>
+    <input type="submit" value="Inscription" class="register-button" >
+  </form>
+
+
+  
+</body>
+</html>
